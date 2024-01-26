@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Làm quen</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+</head>
+<body>
+  <!-- ăn trộm navbar về làm menu-->
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="https://img5.thuthuatphanmem.vn/uploads/2022/01/16/logo-fpt-polytechnic_043151471.png" alt="" srcset="" width="100px">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Danh Sách
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Bún đậu mắm tôm</a></li>
+                  <li><a class="dropdown-item" href="#">Bún Chó Vĩnh phúc</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Thịt trâu Yên Bái</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" aria-disabled="true">Xin chào : cuongdzvl</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <!--tạo slider - keyword : carousel -->
+      <div id="carouselExample" class="carousel slide">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://quamienbac.com/wp-content/uploads/2019/07/cay-to-7-mon.jpg" class="d-block w-100" alt="..." width="" height="800px"> 
+          </div>
+          <div class="carousel-item">
+            <img src="https://www.thucphamchosach.com/images/2020/thit_cho_7_mon.jpg" class="d-block w-100" alt="..." height="800px">
+          </div>
+          <div class="carousel-item">
+            <img src="https://daynauan.info.vn/wp-content/uploads/2020/11/doi-cho.jpg" class="d-block w-100" alt="..." height="800px">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <!-- thẻ thông báo -->
+      <div class="alert alert-primary" role="alert">
+        Thẻ alert-primary
+      </div>
+      <div class="alert alert-success" role="alert">
+        A simple success 
+      </div><div class="alert alert-danger" role="alert">
+        A simple danger!
+      </div><div class="alert alert-warning" role="alert">
+        A simple warning 
+      </div>
+
+      <!-- nut button -->
+      <!-- button co backgraond -->
+      <button class="btn btn-success">thêm</button>
+      <button class="btn btn-warning">xửa</button>
+      <button class="btn btn-danger">thêm</button>
+      <!-- ko co backgrow -->
+      
+      <button class="btn btn-outline-success">thêm</button>
+      <button class="btn btn-outline-warning">xửa</button>
+      <button class="btn btn-outline-danger">xóa</button>
+      <!-- button grup(nhom cac nut lai ma ko cần css) -->
+      
+      <div class="btn-group" role="group">
+      <button class="btn btn-success">thêm</button>
+      <button class="btn btn-warning">xửa</button>
+      <button class="btn btn-danger">xóa</button>
+      </div>
+
+      <!-- bang -->
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">Handle</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>cường</td>
+            <td>19</td>
+            <td>
+              <div class="btn-group" role="group">
+                
+                <button class="btn btn-warning">xửa</button>
+                <button class="btn btn-danger">xóa</button>
+                </div>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>phương</td>
+            <td>18</td>
+            <td>
+              <div class="btn-group" role="group">
+                
+                <button class="btn btn-warning">xửa</button>
+                <button class="btn btn-danger">xóa</button>
+                </div>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>tuyên</td>
+            <td>18</td>
+            <td>
+              <div class="btn-group" role="group">
+                
+                <button class="btn btn-warning">xửa</button>
+                <button class="btn btn-danger">xóa</button>
+                </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- from -->
+      <form action="">
+        <div class="mb-3">
+          <label for="ho_ten" class="form-label">Ho va ten</label>
+          <input type="text" class="form-control" id="ho_ten" placeholder="vui long nhap ho ten">
+        </div>
+        <select class="form-select" aria-label="Default select example">
+          <option selected>vui long chon gioi tinh</option>
+          <option value="1">Nam</option>
+          <option value="2">Nu</option>
+          <option value="3">Khách</option>
+        </select>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+          <label class="form-check-label" for="flexCheckDefault">
+            đã có ny
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+          <label class="form-check-label" for="flexCheckChecked">
+            có rất nhiều ny
+          </label>
+        </div>
+        <div class="mb-3">
+          <label for="mo_ta" class="form-label">Mo ta</label>
+          <textarea type="text" class="form-control" id="mo_ta" rows=""3></textarea>
+        </div>
+        <button type="submit" class="btn btn-success">thêm thông tin</button>
+        <button type="button" class="btn btn-link">Link</button>
+        <button type="button" class="btn btn-link">Link</button>
+      </form>
+      <!-- dynamic tab -->
+      <!-- nav tabs -->
+      <ul class="nav nav-pills">
+        <li class="nav-item">
+          <a class="nav-link active" data-bs-toggle="pill" href="#danh_sach">Danh sach sinh vien</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-bs-toggle="pill" href="#them">them sinh vien</a>
+        </li>
+        
+      </ul>
+      
+      <!-- Tab panes -->
+      <div class="tab-content">
+        <div class="tab-pane container active" id="danh_sach">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>cường</td>
+                <td>19</td>
+                <td>
+                  <div class="btn-group" role="group">
+                    
+                    <button class="btn btn-warning">xửa</button>
+                    <button class="btn btn-danger">xóa</button>
+                    </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>phương</td>
+                <td>18</td>
+                <td>
+                  <div class="btn-group" role="group">
+                    
+                    <button class="btn btn-warning">xửa</button>
+                    <button class="btn btn-danger">xóa</button>
+                    </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>tuyên</td>
+                <td>18</td>
+                <td>
+                  <div class="btn-group" role="group">
+                    
+                    <button class="btn btn-warning">xửa</button>
+                    <button class="btn btn-danger">xóa</button>
+                    </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="tab-pane container fade" id="them">
+          <form action="">
+            <div class="mb-3">
+              <label for="ho_ten" class="form-label">Ho va ten</label>
+              <input type="text" class="form-control" id="ho_ten" placeholder="vui long nhap ho ten">
+            </div>
+            <select class="form-select" aria-label="Default select example">
+              <option selected>vui long chon gioi tinh</option>
+              <option value="1">Nam</option>
+              <option value="2">Nu</option>
+              <option value="3">Khách</option>
+            </select>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <label class="form-check-label" for="flexCheckDefault">
+                đã có ny
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+              <label class="form-check-label" for="flexCheckChecked">
+                có rất nhiều ny
+              </label>
+            </div>
+            <div class="mb-3">
+              <label for="mo_ta" class="form-label">Mo ta</label>
+              <textarea type="text" class="form-control" id="mo_ta" rows=""3></textarea>
+            </div>
+            <button type="submit" class="btn btn-success">thêm thông tin</button>
+          </form>
+        </div>
+        <div class="tab-pane container fade" id="menu2">...</div>
+      </div>
+      <!-- tab paner -->
+</body>
+<script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</html>

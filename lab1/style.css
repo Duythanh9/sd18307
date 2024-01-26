@@ -1,0 +1,20 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-color: #fff;
+}
+.table{
+    padding: 10px;
+    padding-top: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    
+    
+    border: solid 1px beige ;
+    border-radius: 10px;
+}
+.texttieude{
+    padding: 10;
+    
+    background-color: aliceblue;
+}

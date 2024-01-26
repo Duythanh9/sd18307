@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Làm quen</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    #header {
+      background-color: #424040;
+    }
+
+    .navbar {
+      background-color: #424040;
+    }
+  </style>
+</head>
+  
+<body>
+  <div class="container">
+    
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a class="nav-link active" data-bs-toggle="tab" href="#capnhap">Cập nhập</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="#danhsach">Danh sách</a>
+        </li>
+        </ul>
+        <div class="table ">
+    
+        <!-- Tab panes -->
+        <div class="tab-content">
+        <div class="tab-pane container active" id="capnhap">
+            <form class="row g-3">
+            <p class="texttieude col-12" style="height: 40px;">Nhập lương tháng 12</p>
+            <div class="col-md-6">
+                <label for="inputEmail4" class="form-label">Mã Nhân Viên</label>
+                <input type="email" class="form-control" id="inputEmail4">
+            </div>
+            <div class="col-md-6">
+                <label for="inputPassword4" class="form-label">Họ và tên</label>
+                <input type="text" class="form-control" id="inputPassword4">
+            </div>
+            <div class="col-md-6">
+                <label for="inputGroupSelect01" class="form-label">Câu Lạc Bộ</label>
+                <select class="form-select" id="inputGroupSelect01">
+                <option selected>đà nẵng</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+                </select>
+            </div>
+            <div class="col-md-6">
+                <label for="inputPassword4" class="form-label">Lương</label>
+                <div class="input-group">
+                <span class="input-group-text">$</span>
+                <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                <span class="input-group-text">.00</span>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <label for="inputPassword4" class="form-label">Thưởng</label>
+                <div class="input-group">
+                <span class="input-group-text">$</span>
+                <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                <span class="input-group-text">.00</span>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <label for="inputPassword4" class="form-label">Phụ cấp</label>
+                <div class="input-group">
+                <span class="input-group-text">$</span>
+                <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                <span class="input-group-text">.00</span>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="mo_ta" class="form-label">Ghi Chú</label>
+                <textarea type="text" class="form-control" id="mo_ta" rows=""3></textarea>
+              </div>
+            <div class="col-12">
+                <button type="button" class="btn btn-light">Lưu</button>
+                <button type="button" class="btn btn-light">Hủy</button>
+            </div>
+            </form>
+        </div>
+        <div class="tab-pane container fade" id="danhsach">
+
+            <table class="table">
+                <p class="texttieude col-12" style="height: 40px;">bảng lương tháng 12</p>
+                <thead>
+                    <tr>
+                        <th rowspan="2">MÃ NV</th>
+                        <th rowspan="2">Họ Và Tên</th>
+                        <th colspan="2">Thu Nhập</th>
+                    </tr>
+                    <tr>
+                        <th>Lương</th>
+                        <th>Thưởng</th>
+                        <th>phụ cấp</th>
+                    </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>cường</td>
+                    <td>19</td>
+                    <td>19</td>
+                    <td>19</td>
+                    
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>phương</td>
+                    <td>19</td>
+                    <td>19</td>
+                    <td>19</td>
+                    
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>tuyên</td>
+                    <td>19</td>
+                    <td>19</td>
+                    <td>19</td>
+                    
+                  </tr>
+                </tbody>
+              </table>
+              <p class="texttieude col-12" style="height: 40px;">bảng lương tháng 12</p>
+        </div>
+        </div>
+     </div>   
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

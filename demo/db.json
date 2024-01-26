@@ -1,0 +1,54 @@
+{
+  "user": [
+    {
+      "username": "cuongtt124",
+      "password": "123456",
+      "hoten": "tran trieu cuong",
+      "id": "c530"
+    }
+  ],
+  "danhsachny": [
+    {
+      "id": "2",
+      "hoten": "nguyen tuấn1",
+      "tuoi": 30,
+      "Gioitinh": "nữ",
+      "quequan": "hai phong"
+    },
+    {
+      "hoten": "trần triều cường",
+      "tuoi": 20,
+      "Gioitinh": "nam",
+      "quequan": "hai dương",
+      "id": "3"
+    },
+    {
+      "id": "4",
+      "hoten": "trần triều cường",
+      "tuoi": 20,
+      "Gioitinh": "nam",
+      "quequan": "hai dương"
+    },
+    {
+      "id": "5",
+      "hoten": "trần triều cường good boy",
+      "tuoi": 20,
+      "Gioitinh": "nam",
+      "quequan": "hai dương"
+    },
+    {
+      "id": "6",
+      "hoten": "HA PHƯƠNG",
+      "tuoi": "19",
+      "Gioitinh": "Nam",
+      "quequan": "duy tân"
+    },
+    {
+      "id": "7",
+      "hoten": "cuong",
+      "tuoi": "19",
+      "Gioitinh": "Nam",
+      "quequan": "duy tân"
+    }
+  ]
+}

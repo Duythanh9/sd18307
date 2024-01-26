@@ -1,0 +1,30 @@
+<h1 class="text-center">{{title}}</h1>
+<form action="" ng-submit="addny()" >
+   <div class="mb-3">
+        <label for="id" class="form-lable">Nhập Id</label>
+        <input ng-model="nguoiYeu.id" type="text" class="from-control" id="id" placeholder="nhập id">
+    </div>
+    <div class="mb-3">
+    <label for="hoten" class="form-lable">Nhập ten</label>
+    <input ng-model="nguoiYeu.hoten" type="text" class="from-control" id="hoten" placeholder="nhập tên">
+    </div>
+    <div class="mb-3">
+    <label for="tuoi" class="form-lable">Nhập tuoi</label>
+    <input ng-model="nguoiYeu.tuoi" type="text" class="from-control" id="tuoi" placeholder="nhập tuoi">
+    </div>
+    <select ng-model="nguoiYeu.Gioitinh" for="Gioitinh" class="form-select" aria-label="Default select Example">
+        <option selected value="">chọn giới tính</option>
+        <option value="Nam">Nam</option>
+        <option value="Nữ">Nữ</option>
+        <option value="Khác">Khác</option>
+    </select>
+    <div class="mb-3">
+        <label for="quequan" class="form-lable">Nhập que quan</label>
+        <input ng-model="nguoiYeu.quequan" type="text" class="from-control" id="quequan" placeholder="nhập quequan">
+    </div>
+    <button type="submit" class="btn btn-success">thêm sinh viên</button>
+
+        
+      
+</form> 
+ 

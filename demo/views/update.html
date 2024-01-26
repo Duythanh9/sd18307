@@ -1,0 +1,36 @@
+<h1>{{title}}</h1>
+<div class="container">
+
+  <form action="" ng-submit="updateny()">
+    <div class="row">
+      <div class="col-6">
+        <label for="hoTen" class="form-label">Họ Và tên</label>
+        <input ng-model="oldny.hoten" type="text" class="form-control" id="hoTen">
+      </div>
+
+      <div class="col-6">
+        <label for="tuoi" class="form-label">Tuổi</label>
+        <input ng-model="oldny.tuoi" type="number" class="form-control" id="tuoi">
+      </div>
+
+      <div class="col-6">
+        <label for="diacchi" class="form-label">que quán</label>
+        <input ng-model="oldny.quequan" type="text" class="form-control" id="diachi">
+      </div>
+
+        <select class="form-select" aria-label="" ng-model="oldny.Gioitinh">
+          <option ng-selected="oldny.Gioitinh" value="1">Nam</option>
+          <option ng-selected="oldny.Gioitinh" value="2">Nữ</option>
+          <option ng-selected="oldny.Gioitinh" value="3">Khác</option>
+        </select>
+
+
+    <div class="col-12">
+    <button type="submit" class="btn btn-primary">Sửa</button>
+    <a href="#!/trang-chu"><button class="btn btn-">Quay lại</button></a>
+
+    </div>
+
+</form>
+</div>
+

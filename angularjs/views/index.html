@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+
+    <script src="../lib/angular.min.js"></script>
+</head>
+<!-- ng-/ dricetice (chỉ thị):giúp mở rộng khả năng của html -->
+<!-- ng-app:dung để định nghĩa cung sử dụng angularjs -->
+<style>
+    table, th, td {
+  border: 1px solid black;
+}
+</style>
+<body ng-app="myApp">
+        <div ng-controller="testController">
+            <h1>Lời Chao: {{xinchao}}</h1>
+            <h2>Họ Tên: {{hoten}}</h2>
+        </div>
+   
+        <div class="container" ng-controller="testController1" >
+            <h1>ho va ten: {{hoten}}</h1>
+            <h2>tuổi: {{tuoi}}</h2>
+            <h2>lớp :{{lop}}</h2>
+            <h2>tên người yêu cũ:{{tennyc}}</h2>
+            <h2>ngaychiatay:{{ngaychiatay}}</h2>
+
+        </div>
+
+        <div ng-controller="classController">
+            <h1>tên lớp: {{tenlop}}</h1>
+            <h1>Môn Học: {{monhoc}}</h1>
+            <h1>Số Lương:{{soluong}}</h1>
+            <h2>danh sach sinh vien dung index</h2>
+            <table border="1">
+                <thead>
+                    <th>Họ Tên</th>
+                    <th>tuổi</th>
+                    <th>chuyên ngành</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{danhsachsv[0].hoten}}</td>
+                        <td>{{danhsachsv[0].tuoi}}</td>
+                        <td>{{danhsachsv[0].chuyennganh}}</td>
+                    </tr>
+                    <tr>
+                        <td>{{danhsachsv[1].hoten}}</td>
+                        <td>{{danhsachsv[1].tuoi}}</td>
+                        <td>{{danhsachsv[1].chuyennganh}}</td>
+                    </tr>
+                    <tr>
+                        <td>{{danhsachsv[2].hoten}}</td>
+                        <td>{{danhsachsv[2].tuoi}}</td>
+                        <td>{{danhsachsv[2].chuyennganh}}</td>
+                    </tr>
+                    <tr>
+                        <td>{{danhsachsv[3].hoten}}</td>
+                        <td>{{danhsachsv[3].tuoi}}</td>
+                        <td>{{danhsachsv[3].chuyennganh}}</td>
+                    </tr>
+                </tbody>
+
+            </table>
+            <h2>su dung vong lap</h2>
+            <table border="1">
+                <thead>
+                    <th>Họ Tên</th>
+                    <th>tuổi</th>
+                    <th>chuyên ngành</th>
+                </thead>
+
+                <tbody ng-repeat="sinhVien in danhsachsv">
+                    <tr>
+                        <td>{{sinhVien.hoten}}</td>
+                        <td>{{sinhVien.tuoi}}</td>
+                        <!-- <td>{{sinhVien.chuyennganh}}</td> cach 2-->
+                        <td ng-bind="sinhVien.chuyennganh"></td>
+                    </tr>
+                </tbody>
+
+            </table>
+
+        </div>
+        <div ng-controller="note" class="container">
+            <form>
+            <h1>tên : {{thongtincanhan[0].hovaten}}</h1>
+            <h1>tuoi: {{thongtincanhan[0].tuoi}}</h1>
+            <h1>Số điện thoại:{{thongtincanhan[0].sdt}}</h1>
+            
+            <table class="table table table-striped-columns">
+                <thead>
+                  <tr>
+                    <th scope="col">tên</th>
+                    <th scope="col">Tuổi</th>
+                    <th scope="col">quê quán</th>
+                    <th scope="col">quen âu chưa</th>
+                  </tr>
+                </thead>
+                <tbody ng-repeat="nguoiYeu in danhsachny">
+                  <tr>
+                    <td ng-bind="nguoiYeu.hotenny"></td>
+                    <td ng-bind="nguoiYeu.tuoi"></td>
+                    <td ng-bind="nguoiYeu.quequan"></td>
+                    <td ng-bind="nguoiYeu.quenlauchu"></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+                <fieldset disabled>
+                  <legend>Disabled fieldset example</legend>
+                  <div class="mb-3">
+                    <label for="disabledTextInput" class="form-label">Nhap so luong</label>
+                    <input type="text" id="disabledTextInput" class="form-control" placeholder="nhập số lượng">
+                  </div>
+                  <div class="mb-3">
+                    <label for="disabledTextInput" class="form-label">Nhap từ khóa</label>
+                    <input type="text" id="disabledTextInput" class="form-control" placeholder="Dnhập từ khóa">
+                  </div>
+                  
+                 
+                  
+                </fieldset>
+              </form>
+            
+
+        </div>
+        <!-- khởi tạo controller thông tin cá nhân danh sach ny( tên tuổi quê quán quen lâu chưa) lớp hiển thị dữ liệu kết hợp bootstrap -->
+    
+    <!-- ví dụ khởi tạo 1 vung controller mới -->
+    <!-- khai báo và hiên thị họ tên tuôi lớp,tên người yêu cũ,ngày chia tay -->
+    <script>
+        // khơi tạo module
+        // định nghĩa vung angulerjs là vung vừa đặt tên bên trên
+        let data=angular.module('myApp',[]);//có 2 tham số (tên cua ng-app, thành phần phụ thuộc)
+        
+        //khoi tao vung - controler
+
+        data.controller('testController',testFunction);
+        //testController là tên của controller
+        //testFunction là tên của function đc dung
+        function testFunction($scope){// tham số scope luôn luôn phải có để phục vụ render dữ liệu
+            $scope.xinchao="xin chao cac ban"//vidu
+            $scope.hoten="tran trieu cuong"
+
+        }
+        data.controller('testController1',testFunction1);
+        //testController là tên của controller
+        //testFunction là tên của function đc dung
+        function testFunction1($scope){// tham số scope luôn luôn phải có để phục vụ render dữ liệu
+            
+            $scope.hoten="tran trieu cuong"
+            $scope.tuoi=18
+            $scope.lop="sd18307"
+            $scope.tennyc="hà mai fuong"
+            $scope.ngaychiatay="truoc ngay cuoi"
+
+        }
+        data.controller('classController',sd18307);
+        function sd18307($scope){
+            $scope.tenlop="SD18308"
+            $scope.monhoc='Web207 - frontend frameword'
+            $scope.soluong=40;
+            $scope.danhsachsv=[
+                {
+                    hoten:'nguyen anh',
+                    tuoi:18,
+                    chuyennganh:'CNTT'
+                },
+                {
+                    hoten:'nguyen linh',
+                    tuoi:19,
+                    chuyennganh:'UDPM'
+                },
+                {
+                    hoten:'nguyen mai',
+                    tuoi:20,
+                    chuyennganh:'CNTT'
+                },
+                {
+                    hoten:'nguyen minh',
+                    tuoi:18,
+                    chuyennganh:'UDPM'
+                },
+                {
+                    hoten:'nguyen tuân',
+                    tuoi:20,
+                    chuyennganh:'UDPM'
+                },
+                {
+                    hoten:'nguyen tuấn',
+                    tuoi:30,
+                    chuyennganh:'UDPM'
+                }
+            ]
+        }
+        // khai báo controller mới
+        data.controller('note',notes);
+        function notes($scope){
+            $scope.thongtincanhan=[
+                {
+                    hovaten: 'tran trieu cuong',
+                    tuoi: 18,
+                    sdt: +84934310955
+                }
+            ]
+            $scope.danhsachny=[
+                {
+                    hotenny: 'nguoi yeu 1',
+                    tuoi:18,
+                    quequan:'que quan 1',
+                    quenlauchu: 'lau roi'
+                },
+                {
+                    hotenny: 'nguoi yeu 2',
+                    tuoi:28,
+                    quequan:'que quan 2',
+                    quenlauchu: 'lau roi'
+                },
+                {
+                    hotenny: 'nguoi yeu 3',
+                    tuoi:38,
+                    quequan:'que quan 3',
+                    quenlauchu: 'lau roi'
+                },
+                {
+                    hotenny: 'nguoi yeu 4',
+                    tuoi:48,
+                    quequan:'que quan 4',
+                    quenlauchu: 'lau roi'
+                },
+                {
+                    hotenny: 'nguoi yeu 5',
+                    tuoi:58,
+                    quequan:'que quan 5',
+                    quenlauchu: 'lau roi'
+                },
+                {
+                    hotenny: 'nguoi yeu 6',
+                    tuoi:68,
+                    quequan:'que quan 6',
+                    quenlauchu: 'lau roi'
+                },
+            ]
+        }
+    </script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+</body>
+</html>
