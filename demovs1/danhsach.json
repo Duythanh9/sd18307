@@ -1,0 +1,61 @@
+{
+  "user": [
+    {
+      "user1e": "trantrieucuong",
+      "password": "12345678",
+      "hoten": "trantrieucuong",
+      "id": "admin1"
+    }
+  ],
+  "danhsachsinhvien": [
+    {
+      "hoten": "trần triều cường",
+      "tuoi": 21,
+      "Gioitinh": "1",
+      "quequan": "hai dương",
+      "id": "2"
+    },
+    {
+      "id": "3",
+      "hoten": "trần triều cường",
+      "tuoi": 20,
+      "Gioitinh": "1",
+      "quequan": "hai dương"
+    },
+    {
+      "id": "4",
+      "hoten": "trần triều cường good boy",
+      "tuoi": 20,
+      "Gioitinh": "1",
+      "quequan": "hai dương"
+    },
+    {
+      "id": "5",
+      "hoten": "HA PHƯƠNG",
+      "tuoi": "19",
+      "Gioitinh": "1",
+      "quequan": "duy tân"
+    },
+    {
+      "id": "92a9",
+      "hoten": "trần triều cường",
+      "tuoi": "19",
+      "Gioitinh": "1",
+      "quequan": "duy tân"
+    },
+    {
+      "id": "8d85",
+      "hoten": "nguyen anh",
+      "tuoi": "19",
+      "Gioitinh": "2",
+      "quequan": "duy tân"
+    },
+    {
+      "id": "30de",
+      "hoten": "HA PHƯƠNG",
+      "tuoi": "13",
+      "Gioitinh": "2",
+      "quequan": "123"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+<div class="container">
+    <h1 class="text-center">{{title}}</h1>
+<form class="row g-3" ng-submit="addsinhvien()">
+    
+   
+    <div class="col-12">
+      <label for="hoten" class="form-label"> họ tên sinh viên</label>
+      <input type="text" ng-model="sinhvien.hoten" class="form-control" id="hoten" placeholder="họ và tên">
+    </div>
+    <div class="col-12">
+        <label for="tuoi" class="form-label"> tuổi</label>
+        <input type="text" ng-model="sinhvien.tuoi" class="form-control" id="tuoi" placeholder="tuổi">
+      </div>
+    
+    <select  ng-model="sinhvien.Gioitinh" for="Gioitinh" class="form-select" aria-label="Default select Example">
+        <option  selected value="">Chọn giới tính</option>
+        <option value="1">nam</option>
+        <option value="2">nữ</option>
+        <option value="3">khác</option>
+    </select>
+    <div class="col-12">
+        <label for="quequan" class="form-label"> quê quán</label>
+        <input type="text" ng-model="sinhvien.quequan" class="form-control" id="quequan" placeholder="quequan">
+      </div>
+    
+    <div class="col-12">
+      <button type="submit" class="btn btn-primary"> thêm sinh viên</button>
+      <a href="#!/trang-chu"><button class="btn btn-">quay lại</button></a>
+    </div>
+  </form>
+ </div> 

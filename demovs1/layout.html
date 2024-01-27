@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="layout.css">
+    <script src="./libs/angular.min.js"></script>
+    <script src="./libs/angular.route.min.js"></script>
+
+</head>
+<body ng-app="myApp">
+    <header>
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img src="./z5104440896966_bf80ce242213dd16f65d1b11af1f2540.jpg" alt="" class="imglogo" style="width: 50px; border-radius: 20px;"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Trang chủ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#!/trang-add">Trang thêm sinh viên</a>
+                    </li>
+
+                        
+                    
+                    
+                    </ul>
+                    
+                </div>
+                </div>
+            </nav>
+        </div> 
+    </header>
+    <div class="container">
+        <div ng-view>
+            <!-- ng-view để định nghĩa phần hiển thị -->
+        </div>
+    </div>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./controller/indexController.js"></script>
+<script src="./controller/addController.js"></script>
+<script src="./controller/updateController.js"></script>
+<script src="./controller/chitetController.js"></script>
+<script>
+    let data = angular.module('myApp',['ngRoute']);
+    //ngroute sẽ là chức năng điều hường
+    data.config(function($routeProvider){
+        // config() cấu hình tham số trước khi ứng dụng chạy vào
+        // $routeProvider tham số định nghĩa sắn trong angular-mạc định
+        $routeProvider
+        .when(
+            '/trang-chu',
+            {
+                templateUrl:'views/index.html',//đường dẫn
+                controller:indexController
+            }
+        )
+        .when(
+            '/trang-add',
+            {
+                templateUrl:'views/add.html',//đường dẫn
+                controller:addController
+            }
+        )
+        .when(
+            '/trang-update/:id',
+            {
+                templateUrl:'views/update.html',//đường dẫn
+                controller:updatesinhvien
+            }
+        )
+        .when(
+            '/trang-chitiet/:id',
+            {
+                templateUrl:'views/chitiet.html',//đường dẫn
+                controller:chitiesinhvien
+            }
+        )
+        .otherwise(
+            {
+                redirectTo:'/trang-chu',
+            }
+        )
+    })
+</script>
+</html>

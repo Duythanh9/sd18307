@@ -1,7 +1,7 @@
 window.addController=function($scope,$http,$location){
     //$location để hỗ trợ điều hướng về trang chủ
     $scope.title="đây là trang thêm"
-    //$funtion thêm dữ liệu
+    //funtion thêm dữ liệu
     $scope.addny=function(){
         const apiListny="http://localhost:3000/danhsachny";
         let newny={

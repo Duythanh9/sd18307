@@ -1,0 +1,37 @@
+<h1>{{title}}</h1>
+<div class="container">
+
+  <form action="" class="row g-3">
+    <div class="row">
+      <div class="col-12">
+        <label for="hoTen" class="form-label">Họ Và tên</label>
+        <input disabled ng-model="oldsinhvien.hoten" type="text" class="form-control" id="hoTen">
+      </div>
+
+      <div class="col-12">
+        <label for="tuoi" class="form-label">Tuổi</label>
+        <input disabled ng-model="oldsinhvien.tuoi" type="number" class="form-control" id="tuoi">
+      </div>
+
+      <div class="col-12">
+        <label for="diacchi" class="form-label">que quán</label>
+        <input disabled ng-model="oldsinhvien.quequan" type="text" class="form-control" id="diachi">
+      </div>
+      <div>
+        <label for="diacchi" class="form-label">gioitinh</label>
+        <select class="form-select" aria-label="" ng-model="oldsinhvien.Gioitinh" disabled>
+            
+          <option ng-selected="oldsinhvien.Gioitinh" ng-if="oldsinhvien.Gioitinh==1" value="1">nam</option>
+          <option ng-selected="oldsinhvien.Gioitinh" ng-if="oldsinhvien.Gioitinh==2"value="2">nữ</option>
+          <option ng-selected="oldsinhvien.Gioitinh" ng-if="oldsinhvien.Gioitinh==3"value="3">khác</option>
+        </select>
+        </div>
+
+    <div class="col-12">
+    
+    <a href="#!/trang-chu"><button class="btn btn-">Quay lại</button></a>
+
+    </div>
+
+</form>
+</div>
