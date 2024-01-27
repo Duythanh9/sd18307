@@ -1,0 +1,17 @@
+/* Thiết lập font chung cho toàn bộ trang */
+body {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Đặt nền cho toàn bộ trang */
+body {
+    background-color: #f5f5f5;
+}
+img{
+    width: 50px;
+}
